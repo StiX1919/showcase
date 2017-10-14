@@ -41,11 +41,12 @@ class EvenAndOdd extends Component {
     render(){
         return(
             <div className="puzzleBox evenAndOddPB">
-                <input className="inputLine" onChange={(e)=> this.handleChange(e.target.value)}></input>
+                <h4>Evens and Odds</h4>
+                <input className="inputLine" onChange={(e)=> this.handleChange(e.target.value)} placeholder="Ex. 1,2,3,4"></input>
                 <button className="confirmationButton" onClick={()=>this.assignEvenAndOdds(this.state.userInput)}>Split</button>
                 <span className="resultsBox">{JSON.stringify(this.state.evenArray)}</span>
                 <span className="resultsBox">{JSON.stringify(this.state.oddArray)}</span>
-                <h4>Evens and Odds</h4>
+                
             </div>
         )
     }

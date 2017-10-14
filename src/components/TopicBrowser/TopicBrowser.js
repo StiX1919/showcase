@@ -5,6 +5,7 @@ import FilterString from '../Topics/FilterString.js'
 import Palindrome from '../Topics/Palindrome.js'
 import Sum from '../Topics/Sum.js'
 import ReverseAndTen from "../Topics/ReverseAndTen.js"
+import SpeedDiff from "../Topics/SpeedDiff.js"
 
 class TopicBrowser extends Component {
     render(){
@@ -16,6 +17,7 @@ class TopicBrowser extends Component {
                 <Palindrome />
                 <Sum />
                 <ReverseAndTen />
+                <SpeedDiff />
             </div>
         )
     }

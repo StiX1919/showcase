@@ -33,9 +33,9 @@ class FilterString extends Component {
     render(){
         return(
             <div className="puzzleBox filterObjectPB">
-                <h4>Filter Object</h4>
+                <h4>Filter String</h4>
                 <span className="puzzleText" > Original: { JSON.stringify(this.state.unfilteredArray) }</span>
-                <input className="inputLine" onChange={(e)=> this.handleState(e.target.value)}></input>
+                <input className="inputLine" onChange={(e)=> this.handleState(e.target.value)} placeholder="Who are you looking for?"></input>
                 <button className="confirmationButton" onClick={()=>this.filterMethod(this.state.userInput)}>Filter</button>
                 <span className="resultsBox filterObjectRB">{ JSON.stringify(this.state.filteredArray) }</span>
             </div>

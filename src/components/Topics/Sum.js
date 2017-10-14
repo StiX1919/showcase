@@ -35,8 +35,8 @@ class Sum extends Component {
         return(
             <div className="puzzleBox filterObjectPB">
                 <h4>Plussing things</h4>
-                <input className="inputLine" onChange={(e)=> this.handleState1(e.target.value)}></input>
-                <input className="inputLine" onChange={(e)=> this.handleState2(e.target.value)}></input>
+                <input className="inputLine" onChange={(e)=> this.handleState1(e.target.value)} placeholder="Number 1"></input>
+                <input className="inputLine" onChange={(e)=> this.handleState2(e.target.value)} placeholder="Number 2"></input>
                 <button className="confirmationButton" onClick={()=>this.sumMethod(this.state.userInput1, this.state.userInput2)}>Add them together</button>
                 <span className="resultsBox filterObjectRB">{ JSON.stringify(this.state.total) }</span>
             </div>

@@ -34,7 +34,7 @@ class ReverseAndTen extends Component {
         return(
             <div className="puzzleBox filterObjectPB">
                 <h4>Reverse numbers and add 10 to each</h4>
-                <input className="inputLine" onChange={(e)=> this.handleState(e.target.value)}></input>
+                <input className="inputLine" onChange={(e)=> this.handleState(e.target.value)} placeholder="Ex: 1,2,3,4"></input>
                 <button className="confirmationButton" onClick={()=>this.revAndTen(this.state.userInput)}>Reverse away</button>
                 <span className="resultsBox filterObjectRB">{ JSON.stringify(this.state.newNums) }</span>
                 <span className="resultsBox filterObjectRB">{ JSON.stringify(this.state.finalNums) }</span>
