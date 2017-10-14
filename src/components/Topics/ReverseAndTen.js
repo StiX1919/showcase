@@ -5,7 +5,8 @@ class ReverseAndTen extends Component {
 
         super()
         this.state = {
-        newNums: 0,
+        newNums: "Backwards",
+        finalNums: "+10",
         userInput: 0,
 
         }
@@ -18,10 +19,14 @@ class ReverseAndTen extends Component {
 
     revAndTen (userInput) {
         var revStr = userInput.split(",").reverse()
+        var backNums = []
         for(var i=0;i<revStr.length;i++)(
+            backNums.push(parseInt(revStr[i])),
+
             revStr[i]=parseInt(revStr[i]) +10
         )
-        this.setState({newNums: revStr})
+        this.setState({newNums: backNums})
+        this.setState({finalNums: revStr})
     }
 
 
@@ -32,6 +37,7 @@ class ReverseAndTen extends Component {
                 <input className="inputLine" onChange={(e)=> this.handleState(e.target.value)}></input>
                 <button className="confirmationButton" onClick={()=>this.revAndTen(this.state.userInput)}>Reverse away</button>
                 <span className="resultsBox filterObjectRB">{ JSON.stringify(this.state.newNums) }</span>
+                <span className="resultsBox filterObjectRB">{ JSON.stringify(this.state.finalNums) }</span>
             </div>
         )
     }
